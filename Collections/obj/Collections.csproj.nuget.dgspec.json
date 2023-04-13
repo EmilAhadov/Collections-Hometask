@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ca.r213.15\\Desktop\\Collections\\Collections\\Collections.csproj": {}
+    "C:\\Users\\Durak\\Desktop\\Collections-Hometask\\Collections\\Collections.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ca.r213.15\\Desktop\\Collections\\Collections\\Collections.csproj": {
+    "C:\\Users\\Durak\\Desktop\\Collections-Hometask\\Collections\\Collections.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ca.r213.15\\Desktop\\Collections\\Collections\\Collections.csproj",
+        "projectUniqueName": "C:\\Users\\Durak\\Desktop\\Collections-Hometask\\Collections\\Collections.csproj",
         "projectName": "Collections",
-        "projectPath": "C:\\Users\\ca.r213.15\\Desktop\\Collections\\Collections\\Collections.csproj",
-        "packagesPath": "C:\\Users\\ca.r213.15\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ca.r213.15\\Desktop\\Collections\\Collections\\obj\\",
+        "projectPath": "C:\\Users\\Durak\\Desktop\\Collections-Hometask\\Collections\\Collections.csproj",
+        "packagesPath": "C:\\Users\\Durak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Durak\\Desktop\\Collections-Hometask\\Collections\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ca.r213.15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Durak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

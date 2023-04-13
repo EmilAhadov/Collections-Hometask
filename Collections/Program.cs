@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Security;
 using System.Threading;
 
 namespace Collections
@@ -53,35 +54,119 @@ namespace Collections
         //}
         //-------------------------------------------------------------------------------------------------------
         //Task3
+
         //static void Main(string[] args)
         //{
-        //    int cursor = 7;
         //    Console.WriteLine("Please enter the sentence");
-        //    string sentence = Console.ReadLine();
+        //    string currentText = Console.ReadLine();
         //    Stack<string> stack = new Stack<string>();
-        //    stack.Push(sentence);
+        //    string previousText = "";
         //    bool flag = true;
         //    do
         //    {
         //        Console.WriteLine("What do you want to do: \n" +
-        //            "1.Edit Current Text\n" +
-        //            "2.Exit");
-        //        string test = Console.ReadLine();
-        //        if(test == "1")
+        //            "1.Add Current Text\n" +
+        //            "2.Return changes\n" +
+        //            "3.Exit");
+        //        string action = Console.ReadLine();
+        //        switch (action)
         //        {
-        //            Console.WriteLine("hello");
-        //            Console.SetCursorPosition(cursor+4, cursor);
-        //            Console.WriteLine("      ");
-        //        }
-        //        else
-        //        {
-        //            flag = false;
+        //            case "1":
+        //                previousText = currentText;
+        //                stack.Push(previousText);
+        //                currentText += Console.ReadLine();
+        //                break;
+        //            case "2":
+        //                previousText = currentText;
+        //                currentText = stack.Peek();
+        //                stack.Pop();
+        //                stack.Push(previousText);
+        //                break;
+        //            case "3":
+        //                flag = false;
+        //                break;
+        //            default:
+        //                break;
         //        }
         //    } while (flag);
-
+        //    Console.WriteLine(currentText);
         //}
+
+
         //-------------------------------------------------------------------------------------------------------
         //Task4
+
+        static void Main(string[] args)
+        {
+            Queue<Document> documents = new Queue<Document>();
+            Document document1 = new Document
+            {
+                Name = "a",
+                pageAmount = 18
+            };
+            Document document2 = new Document
+            {
+                Name = "b",
+                pageAmount = 23
+            };
+            Document document3 = new Document
+            {
+                Name = "c",
+                pageAmount = 11
+            };
+            documents.Enqueue(document1);
+            documents.Enqueue(document2);
+            documents.Enqueue(document3);
+            bool _continue = true;
+            do
+            {
+                Console.WriteLine("What do you want to do:\n" +
+                    "1.Create and Add document\n" +
+                    "2.Print all documents");
+                string action = Console.ReadLine();
+                switch(action)
+                {
+                    case "1":
+                        documents.Enqueue(CreateDocument());
+                        break;
+                    case "2":
+                        PrintDocuments(documents);
+                        _continue= false;
+                        break;
+                    default:
+                        break;
+                }
+
+            } while (_continue);
+        }
+
+        class Document
+        {
+            public string Name { get; set; }
+            public int pageAmount { get; set; }
+        }
+        static Document CreateDocument()
+        {
+            Document document = new Document();
+            Console.Write("Please enter the document name: ");
+            document.Name = Console.ReadLine();
+            Console.Write("Please enter the document's pages: ");
+            document.pageAmount = int.Parse(Console.ReadLine());
+            return document;
+        }
+        static void PrintDocuments(Queue<Document> documents)
+        {
+            for(int i=0; i<documents.Count; i++)
+            {
+
+                Console.WriteLine($"{i+1}.document name: {documents.Peek().Name}\n" +
+                    $"{i+1}.document's number of page: {documents.Peek().pageAmount}");
+                documents.Dequeue();
+            }
+
+        }
+
+
         //-------------------------------------------------------------------------------------------------------
         //Task5
 
